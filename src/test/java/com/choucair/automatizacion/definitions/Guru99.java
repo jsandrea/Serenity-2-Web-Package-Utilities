@@ -45,5 +45,12 @@ public class Guru99 {
 	public void cargo_el_archivo_de_prueba() {
 		irAPaginasGuru99Steps.cargarAchivo();
 	}
+	
+	@Entonces("^cargo el archivo de prueba con una acción fisica$")
+	public void cargo_el_archivo_de_prueba_con_una_accion_fisica() {
+		irAPaginasGuru99Steps.cargarAchivoConAccionFisica();
+		irAPaginasGuru99Steps.cerrarVentana();
+	}
+	
 
 }

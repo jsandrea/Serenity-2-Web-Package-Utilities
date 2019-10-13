@@ -12,4 +12,8 @@ public class CargaArchivosPage extends PageObject {
 	@FindBy(xpath="//input[contains(@id,'uploadfile_0')]")
 	public WebElementFacade btnSeleccionarArchivo;
 
+	public void clickSeleccionarArchivo() {
+		clickOn(element("//div[@id='file_wraper0']"));
+	}
+
 }
