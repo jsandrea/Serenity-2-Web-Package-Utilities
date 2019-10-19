@@ -2,6 +2,7 @@ package com.choucair.automatizacion.steps;
 
 import com.choucair.automatizacion.pages.CargaArchivosPage;
 import com.choucair.automatizacion.pages.DemoYahooGuru99Page;
+import com.choucair.automatizacion.pages.PopupPage;
 import com.choucair.automatizacion.util.web.files.FileManager;
 import com.choucair.automatizacion.util.web.physical.PhysicalActions;
 
@@ -14,6 +15,7 @@ public class IrAPaginasGuru99Steps {
 	CargaArchivosPage cargaArchivosPage; 
 	FileManager fileManager;
 	PhysicalActions physicalActions;
+	PopupPage popupPage;
 	
 	@Step("Abrir pagina demo de Yahoo")
 	public void abrirPaginaDemoYahoo() {
@@ -49,6 +51,11 @@ public class IrAPaginasGuru99Steps {
 	public void cerrarVentana() {
 		physicalActions.closeWindow();
 		System.out.println("Ventana cerrada");
+	}
+
+	@Step("Ingresar a Paginas Popup")
+	public void ingresarAPaginaPopup() {
+		popupPage.open();
 	}
 
 }
